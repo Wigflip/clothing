@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K.Co Clothing - Shirts</title>
+
+  <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/kcobrush.css" />
+
+  <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+    <header>
+      <div class="row">    
+        <div class="small-12 columns">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo3.png">
+            </a> 
+          </div>
+          <div class="shopwrapper">
+            <div class="shop">SHOP</div>
+            <ul class="submenu">
+              <li><a href="shirts.html">shirts</a></li>
+              <li><a>coats</a></li>
+              <li><a>shoes</a></li>
+            </ul>  
+          </div>
+          <span class="shopwrapper"><a>ABOUT</a></span>
+          <span class="signin"><a>SIGN IN</a></span>
+        </div>
+      </div>
+    </header> 
+    
+    <section>  
+      <div class="row product">
+     
+          <div class="medium-7 columns">
+          	<div class="pictures">
+                <div class="main-pic">
+                
+                  <img src="images/shirtblack.png">
+                </div>   
+            </div> 
+          </div>
+          <div class="medium-5 columns">
+          
+              <div class="details">
+                <h1>T-Shirt</h1>
+                <h3>£34.00</h3>
+                <ul class="size">
+                  <li class="small button">S</li>
+                  <li class="small button">M</li>
+                  <li class="small button">L</li>
+                  <li class="small button">XL</li>
+                </ul> 
+                <h4>Quantity</h4>
+                <div class="quantity">
+                  <span class="add">+</span>
+                  <input id="counter" type="text" value="1">
+                  <span class="sub">-</span>
+                </div>  
+                <div>
+                  <button class="addbut center">Add to bag</button>
+                </div>
+                <div class="share">
+                    <span>Share:</span>
+                        <a><img src="images/twitter.png"></a>
+                        <a><img src="images/tumblr.png"></a>
+                        <a><img src="images/facebook.png"></a> 
+                </div>
+            </div>  
+          </div>
+        </div> 
+    </section>
+    
+    <footer>
+        <div class="row">
+          <div class="small-12 columns">
+              <div class="footer-details">
+                  <a href="">Returns</a>
+                  <a href="">Privacy</a>
+                  <a href="">Sizing</a>
+                  <a href="">Delivery</a>
+              </div>
+              <div class="social">
+               			<a href="#"><img src="images/twitter.png"></a>
+                        <a href="#"><img src="images/tumblr.png"></a>
+                        <a href="#"><img src="images/facebook.png"></a>
+                        <a href="#"><img src="images/youtube.png"></a> 
+              </div>
+              <div class="copyright">
+                  &copy; K.CO Clothing
+              </div>
+          </div>
+        </div>  
+    </footer>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      var counter = $('#counter');
+      var currentval = counter.val();
+
+        $(".add").on("click", function(){
+              counter.val(currentval++);
+        });
+
+        $(".sub").on("click", function(){
+  
+          if(currentval > 1){
+              counter.val(currentval--);
+           }
+          else{
+              counter.val(1);
+          }
+        })
+    });
+  </script>
+</body>
+</html>
