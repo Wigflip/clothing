@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import 'fonts';
+@import 'header';
+@import 'home';
+@import 'product-page';
+@import 'product-type-page';
+@import 'footer';
+
+
+*{
+
+	padding: 0px;
+	margin:0px;
+	box-sizing:border-box;
+}
+
+ h1, h2{
+	font-family: "brush";
+	font-weight:bold;	
+	text-transform: uppercase;
+	/*font-family: "gobold-thin";*/
+}
+
+
+p{
+	margin:0 0 0 0;
+}
+
+span {
+display:inline-block;
+}
+
+
+
+
+
+	

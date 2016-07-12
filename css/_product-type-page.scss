@@ -1,0 +1,151 @@
+/* CLOTHES PAGE */
+
+.color-block{
+	position: absolute;
+	background-color:#E8B256;
+	width:70%;
+	height:200px;
+	z-index:-23;
+	right:0;
+	
+}
+
+.opposite-side{ 
+	.color-block{
+		left:0%;
+	}	
+}
+
+.shirt{
+	position:relative;
+	width:100%;
+	margin:90px 0 0 0;
+	height:200px;
+	text-transform: lowercase;
+	font-family:"gobold-thin";
+
+	h2{
+		margin:0 0 0 0;
+		font-size:48px;
+	}
+ 
+	p{
+		margin:0 0 10px 0; 
+	}
+
+}
+
+.op{
+	position: absolute;
+	top:-9px;
+	right:-350px;
+	height:220px;
+}
+
+.po{
+	position: absolute;
+	top:-10px;
+	left:-350px;
+	height:220px;
+}
+
+.info {
+	position:absolute;
+	right:0;
+	width:60%;
+	padding:15px 20% 10px 0;
+	height:200px;
+	color:black;
+
+	&:hover{
+		.buy{
+			@extend .buy-hover;
+		}
+	}
+
+	img{
+		@extend .info-img;
+		left:-310px;
+	}
+}
+
+
+.info-opposite{
+	position:relative;
+	width: 60%;
+	height:200px;
+	padding:15px 0 10px 23%;
+	color:black;
+
+	&:hover{
+		.buy{
+			@extend .buy-hover;
+		}
+	} 
+
+	.shirtprice{
+		font-size:28px;
+	}
+
+	img{
+		@extend .info-img;
+		right:-310px;
+		z-index:999;
+	}
+}
+
+.buy{
+	position:absolute;	
+	transition:all .25s;
+	font-size:20px;
+	padding:0px 15px;
+	margin:3px 0 0 20px;
+	color:white;
+	border:2px solid white;
+}
+
+.buy-hover{
+	background-color:black;
+	border:2px solid black;	
+	color:#E8B256; 
+}
+
+.info-img {
+	position:absolute;
+	top:-60px;
+	width:270px;
+	height:auto;
+}
+
+
+.page-description{
+	width:60%;
+	margin:60px auto 0 auto;
+
+	h1{
+		text-align: center;
+	}
+
+	h3{
+		text-align: center;
+	}
+
+	p {
+		margin-top: 10px;
+		text-align:center;
+	}
+}
+
+
+.description, .price   {
+
+	text-align: center;
+	font-weight: bold;
+}
+
+section{ 
+	& > h1 {
+		text-transform: uppercase;
+		text-align: center;
+	}
+}

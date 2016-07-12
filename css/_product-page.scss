@@ -1,0 +1,122 @@
+/*PRODUCT PAGE*/
+
+.main-pic{
+	height:550px;
+	width:80%;
+	/*background-image: url(../images/shirt.jpg);*/
+	background-size:cover;
+	float:left;
+}
+
+.product {
+	margin-top:80px;
+}
+
+
+
+.pictures{
+	
+}
+
+.size{
+	margin:40px 0 40px 0;
+}
+
+.size li{
+	margin:0 0;
+}
+
+.quantity{
+	width:100px;
+	margin:0 0 40px 0;
+	padding:5px 0;
+	text-align: center;
+	border: 1px solid black;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.quantity span, #counter{
+	display:inline-block;
+	width:27px;
+	border:none;
+	text-align: center;
+
+}
+
+.quantity .add, .quantity .sub {
+	cursor: pointer;
+}
+
+.share{
+display:inline-block;	
+font-size:24px;
+margin:20px 0 0 0;
+}
+
+.share img {
+height:35px;
+width:auto;
+padding:0 7px 0 7px;
+
+}
+
+.share > span {
+font-weight:bold;	
+
+}
+
+
+@media screen and (max-width: 1440px ){
+
+	h2 {
+		margin:0 0 0 0;
+		font-size:38px;
+	}
+
+	.info {
+		position:absolute;
+		right:0;
+		width:70%;
+		padding:10px 20% 10px 0;
+		height:200px;
+		color:black;	
+	}
+
+	.info-opposite{
+		position:relative;
+		width: 70%;
+		height:200px;
+		padding:10px 0 10px 20%;
+		color:black;
+		
+	}
+	.info img {
+		position:absolute;
+		top:-60px;
+		left:-280px;
+		width:270px;
+		height:auto;
+
+	}
+
+	.info-opposite img{
+		position:absolute;
+		top:-60px;
+		right:-280px;
+		width:270px;
+		height:auto;
+		z-index:999;
+	}
+
+}
+
+@media screen and (max-width: 640px ){
+	
+	body{
+	font-size:24px;	
+	}
+}	
