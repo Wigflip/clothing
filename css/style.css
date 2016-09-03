@@ -1,24 +1,27 @@
 @font-face {
-  font-family: "gobold";
-  src: url("../fonts/Gobold.ttf") format("truetype"); }
-@font-face {
   font-family: "gobold-thin";
   src: url("../fonts/Gobold Thin.ttf") format("truetype"); }
+.gobold-thin, header h2, .submenu, .details, .details h1, .details h3, .page-description h3, .page-description p, .info h2, .info-right h2, .info-left h2, footer {
+  font-family: "gobold-thin"; }
+
 @font-face {
   font-family: "brush";
   src: url("../fonts/LEVIBRUSH.ttf") format("truetype"); }
-body, h3, h4 {
-  font-family: "gobold-thin"; }
+.brush-font, .page-description h1 {
+  font-family: "brush"; }
 
 header {
   text-align: center;
   background-color: white;
   color: black;
-  height: 150px; }
+  height: 200px;
+  text-transform: uppercase; }
   header a {
     color: black; }
   header a:hover {
     color: #ada8a4; }
+  header h2 {
+    font-size: 30px; }
 
 .logo {
   position: absolute;
@@ -27,14 +30,14 @@ header {
   z-index: 1;
   display: inline-block; }
 
-.shopwrapper {
+.nav-button {
   position: relative;
   margin: 60px 30px 0 0;
   font-size: 24px;
   float: left;
   display: inline-block;
   cursor: pointer; }
-  .shopwrapper:hover .submenu {
+  .nav-button:hover .submenu {
     visibility: visible;
     opacity: 1; }
 
@@ -42,10 +45,12 @@ header {
   position: absolute;
   margin: 0 0;
   text-transform: uppercase;
+  text-align: center;
   list-style: none;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  font-size: 22px; }
   .submenu li {
     padding: 5px 0 0 0;
     /*visibility: hidden;*/ }
@@ -55,43 +60,28 @@ header {
   font-size: 24px;
   float: right; }
 
-.social {
-  margin: 0 10px 0 10px; }
-
 /* GENERAL LAYOUT / HOMEPAGE */
 body {
   font-size: 24px; }
 
-.home {
-  height: 400px;
-  margin-top: 60px; }
+main {
+  height: auto;
+  margin: 60px 0 20px 0;
+  text-transform: uppercase; }
+  main a, main a:hover {
+    color: white; }
 
-.pic, .picture, .picture2, .picture3 {
+.pic {
   height: 547px;
   position: relative;
   width: 100%; }
 
-.picture {
-  background-image: url("../images/coats.png"); }
-
-.picture2 {
-  background-image: url("../images/shirts.png"); }
-
-.picture3 {
-  background-image: url("../images/shoes.png"); }
-
-section {
-  margin-top: 20px;
-  text-transform: uppercase; }
-  section a, section a:hover {
-    color: white; }
-
-.home span {
+.section-title {
   position: absolute;
   left: 50%;
   top: 42%;
-  font-size: 55px;
   margin-left: -78.5px;
+  font-size: 55px;
   font-family: "brush"; }
 
 /*PRODUCT PAGE*/
@@ -145,44 +135,17 @@ section {
 .share > span {
   font-weight: bold; }
 
-@media screen and (max-width: 1440px) {
-  h2 {
-    margin: 0 0 0 0;
-    font-size: 38px; }
-
-  .info {
-    position: absolute;
-    right: 0;
-    width: 70%;
-    padding: 10px 20% 10px 0;
-    height: 200px;
-    color: black; }
-
-  .info-opposite {
-    position: relative;
-    width: 70%;
-    height: 200px;
-    padding: 10px 0 10px 20%;
-    color: black; }
-
-  .info img {
-    position: absolute;
-    top: -60px;
-    left: -280px;
-    width: 270px;
-    height: auto; }
-
-  .info-opposite img {
-    position: absolute;
-    top: -60px;
-    right: -280px;
-    width: 270px;
-    height: auto;
-    z-index: 999; } }
 @media screen and (max-width: 640px) {
   body {
     font-size: 24px; } }
 /* CLOTHES PAGE */
+.page-description {
+  width: 60%;
+  margin: 30px auto 110px auto;
+  text-align: center; }
+  .page-description p {
+    margin-top: 10px; }
+
 .color-block {
   position: absolute;
   background-color: #E8B256;
@@ -197,13 +160,10 @@ section {
 .shirt {
   position: relative;
   width: 100%;
-  margin: 90px 0 0 0;
+  margin: 0 0 100px 0;
   height: 200px;
   text-transform: lowercase;
   font-family: "gobold-thin"; }
-  .shirt h2 {
-    margin: 0 0 0 0;
-    font-size: 48px; }
   .shirt p {
     margin: 0 0 10px 0; }
 
@@ -219,69 +179,54 @@ section {
   left: -350px;
   height: 220px; }
 
-.info {
+.info, .info-right, .info-left {
   position: absolute;
+  height: 200px;
+  color: black; }
+  .info h2, .info-right h2, .info-left h2 {
+    margin-bottom: 5px; }
+
+.info-right {
   right: 0;
   width: 60%;
-  padding: 15px 20% 10px 0;
-  height: 200px;
-  color: black; }
-  .info img {
+  padding: 15px 20% 10px 0; }
+  .info-right img {
     left: -310px; }
 
-.info-opposite {
-  position: relative;
+.info-left {
   width: 60%;
-  height: 200px;
-  padding: 15px 0 10px 23%;
-  color: black; }
-  .info-opposite .shirtprice {
-    font-size: 28px; }
-  .info-opposite img {
+  padding: 15px 0 10px 23%; }
+  .info-left img {
     right: -310px;
     z-index: 999; }
+
+.price {
+  width: 100%; }
+  .price span {
+    font-size: 34px; }
 
 .buy {
   position: absolute;
   transition: all .25s;
-  font-size: 20px;
+  font-size: 24px !important;
   padding: 0px 15px;
   margin: 3px 0 0 20px;
   color: white;
   border: 2px solid white; }
 
-.buy-hover, .info:hover .buy, .info-opposite:hover .buy {
+.buy-hover, .info:hover .buy, .info-right:hover .buy, .info-left:hover .buy {
   background-color: black;
   border: 2px solid black;
   color: #E8B256; }
 
-.info-img, .info img, .info-opposite img {
+.info-img, .info-right img, .info-left img {
   position: absolute;
   top: -60px;
   width: 270px;
   height: auto; }
 
-.page-description {
-  width: 60%;
-  margin: 60px auto 0 auto; }
-  .page-description h1 {
-    text-align: center; }
-  .page-description h3 {
-    text-align: center; }
-  .page-description p {
-    margin-top: 10px;
-    text-align: center; }
-
-.description, .price {
-  text-align: center;
-  font-weight: bold; }
-
-section > h1 {
-  text-transform: uppercase;
-  text-align: center; }
-
 footer {
-  margin: 120px 0 20px 0;
+  margin: 40px 0 20px 0;
   height: auto;
   font-size: 1px;
   text-align: center;
@@ -292,7 +237,6 @@ footer {
     color: #ada8a4; }
 
 .footer-details {
-  text-align: center;
   margin: 10px 0 0 0; }
   .footer-details a {
     padding: 10px;
@@ -313,12 +257,6 @@ footer {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box; }
-
-h1, h2 {
-  font-family: "brush";
-  font-weight: bold;
-  text-transform: uppercase;
-  /*font-family: "gobold-thin";*/ }
 
 p {
   margin: 0 0 0 0; }

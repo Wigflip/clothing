@@ -1,5 +1,24 @@
 /* CLOTHES PAGE */
 
+.page-description{
+	width:60%;
+	margin:30px auto 110px auto;
+	text-align: center;
+
+	h1{
+		@extend .brush-font;	
+	}
+	
+	h3{
+		@extend .gobold-thin;
+	}
+
+	p {
+		margin-top: 10px;
+		@extend .gobold-thin;
+	}
+}
+
 .color-block{
 	position: absolute;
 	background-color:#E8B256;
@@ -19,15 +38,10 @@
 .shirt{
 	position:relative;
 	width:100%;
-	margin:90px 0 0 0;
+	margin:0 0 100px 0;
 	height:200px;
 	text-transform: lowercase;
 	font-family:"gobold-thin";
-
-	h2{
-		margin:0 0 0 0;
-		font-size:48px;
-	}
  
 	p{
 		margin:0 0 10px 0; 
@@ -49,11 +63,8 @@
 	height:220px;
 }
 
-.info {
+.info{
 	position:absolute;
-	right:0;
-	width:60%;
-	padding:15px 20% 10px 0;
 	height:200px;
 	color:black;
 
@@ -62,6 +73,19 @@
 			@extend .buy-hover;
 		}
 	}
+
+	h2{
+		margin-bottom:5px;
+		@extend .gobold-thin;
+	}
+}
+
+.info-right {
+	@extend .info;
+	right:0;
+	width:60%;
+	padding:15px 20% 10px 0;
+
 
 	img{
 		@extend .info-img;
@@ -69,23 +93,10 @@
 	}
 }
 
-
-.info-opposite{
-	position:relative;
+.info-left{
+	@extend .info;
 	width: 60%;
-	height:200px;
 	padding:15px 0 10px 23%;
-	color:black;
-
-	&:hover{
-		.buy{
-			@extend .buy-hover;
-		}
-	} 
-
-	.shirtprice{
-		font-size:28px;
-	}
 
 	img{
 		@extend .info-img;
@@ -94,10 +105,18 @@
 	}
 }
 
+.price {
+	width:100%;
+
+	span{
+		font-size:34px;
+	}
+}
+
 .buy{
 	position:absolute;	
 	transition:all .25s;
-	font-size:20px;
+	font-size:24px !important;
 	padding:0px 15px;
 	margin:3px 0 0 20px;
 	color:white;
@@ -118,34 +137,5 @@
 }
 
 
-.page-description{
-	width:60%;
-	margin:60px auto 0 auto;
-
-	h1{
-		text-align: center;
-	}
-
-	h3{
-		text-align: center;
-	}
-
-	p {
-		margin-top: 10px;
-		text-align:center;
-	}
-}
 
 
-.description, .price   {
-
-	text-align: center;
-	font-weight: bold;
-}
-
-section{ 
-	& > h1 {
-		text-transform: uppercase;
-		text-align: center;
-	}
-}

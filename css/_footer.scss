@@ -1,9 +1,10 @@
 footer{
-	margin:120px 0 20px 0;
+	margin:40px 0 20px 0;
 	height:auto;
 	font-size:1px;
 	text-align:center;
 	font-size:22px;
+	@extend .gobold-thin;
 
 	a{
 		color:black;
@@ -15,7 +16,6 @@ footer{
 }
 
 .footer-details{
-	text-align:center;
 	margin:10px 0 0 0;
 	
 	a{

@@ -1,17 +1,18 @@
-@font-face{
-	font-family:"gobold";
-	src: url('../fonts/Gobold.ttf') format('truetype');
-}
 
 @font-face{
 	font-family:"gobold-thin";
 	src: url('../fonts/Gobold Thin.ttf') format('truetype');
 }
 
+.gobold-thin{
+	font-family:"gobold-thin";
+}
+
 @font-face{
 	font-family: "brush";
 	src: url('../fonts/LEVIBRUSH.ttf') format('truetype');
 }
-body, h3, h4 {
-	font-family: "gobold-thin";
+
+.brush-font{
+	font-family: "brush";
 }

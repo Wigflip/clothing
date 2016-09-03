@@ -5,10 +5,16 @@ body{
 font-size:24px;	
 }
 
-.home{
-	height:400px;
-	margin-top: 60px;
-}		
+
+main{
+	height:auto;
+	margin:60px 0 20px 0;
+	text-transform: uppercase;
+
+	a, a:hover {
+		color:white;
+	}
+}
 
 .pic{
 	height:547px;	
@@ -16,39 +22,11 @@ font-size:24px;
 	width:100%;
 }
 
-
-.picture{
-	@extend .pic;
-	background-image: url("../images/coats.png");
-}
-
-.picture2{
-	@extend .pic;
-	background-image: url("../images/shirts.png");
-}
-
-.picture3{
-	@extend .pic;
-	background-image: url("../images/shoes.png");
-}
-
-section{
-	margin-top: 20px;
-	text-transform: uppercase;
-
-	a, a:hover {
-	color:white;
-	}
-
-}
-
-.home span {
-    position:absolute;
-    left:50%;
+.section-title {
+	position:absolute;
+	left:50%;
 	top:42%;
+	margin-left: -78.5px;  
 	font-size:55px;
-    margin-left: -78.5px;
-    font-family: "brush";
+	font-family: "brush";
 }
-
-
